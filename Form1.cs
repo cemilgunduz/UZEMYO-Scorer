@@ -45,13 +45,13 @@ namespace UZEMYO
             List<paper> papers = new List<paper>();
             foreach (string line in lines) {
                 paper paperLine = new paper();
-                paperLine.stuID = line.Substring(20, 9);
-                paperLine.column1 = line.Substring(42, 40);
-                paperLine.column2 = line.Substring(92, 40);
-                paperLine.column3 = line.Substring(142, 40);
-                paperLine.column4 = line.Substring(192, 40);
-                paperLine.column5 = line.Substring(246, 40);
-                paperLine.column6 = line.Substring(296, 40);
+                paperLine.stuID = line.Substring(0, 9);
+                paperLine.column1 = line.Substring(10, 40);
+                paperLine.column2 = line.Substring(50, 40);
+                paperLine.column3 = line.Substring(90, 40);
+                paperLine.column4 = line.Substring(130, 40);
+                paperLine.column5 = line.Substring(170, 40);
+                paperLine.column6 = line.Substring(210, 40);
                 papers.Add(paperLine); 
             }
             return papers;
